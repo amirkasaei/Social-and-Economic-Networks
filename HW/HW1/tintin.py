@@ -60,9 +60,4 @@ for i in range(n):
         break
 
 # Special check at destination vertex
-if tintin_dist[v] >= mafia_final_dist[v]:
-    can_win = False
-else:
-    can_win = True
-
-print("tintin" if can_win else "mafia")
+print("tintin" if tintin_dist[v] < mafia_final_dist[v] else "mafia")

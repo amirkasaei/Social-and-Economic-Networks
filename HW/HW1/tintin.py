@@ -52,12 +52,5 @@ else:
 # Final mafia arrival times
 mafia_final_dist = [min(mafia_dist_no_car[i], mafia_dist_with_car[i]) for i in range(n)]
 
-# Check if Tintin ever encounters mafia (must arrive strictly earlier than mafia everywhere)
-safe = True
-for i in range(n):
-    if tintin_dist[i] >= mafia_final_dist[i]:
-        safe = False
-        break
-
 # Special check at destination vertex
 print("tintin" if tintin_dist[v] < mafia_final_dist[v] else "mafia")

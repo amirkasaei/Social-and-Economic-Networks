@@ -30,17 +30,17 @@ mafia_positions = [int(input()) for _ in range(k)]
 c = int(input())
 car_positions = set(int(input()) for _ in range(c))
 
-destination, start = map(int, input().split())
+v, s = map(int, input().split())
 
 # Calculate Tintin's shortest paths
-tintin_dist = dijkstra(n, adj, [(start, 0)])
+tintin_dist = dijkstra(n, adj, [(s, 0)])
 
 # Mafia calculation without car
 mafia_initial_sources = [(pos, 0) for pos in mafia_positions]
 mafia_dist_no_car = dijkstra(n, adj, mafia_initial_sources)
 
 # Calculate mafia distances with car (half speed edges)
-if len(car_positions) > 0:
+if car_positions:
     car_sources = []
     for car_pos in car_positions:
         if mafia_dist_no_car[car_pos] != float('inf'):
@@ -52,9 +52,6 @@ else:
 # Final mafia arrival times
 mafia_final_dist = [min(mafia_dist_no_car[i], mafia_dist_with_car[i]) for i in range(n)]
 
-# Tintin shortest paths from start
-tintin_dist = dijkstra(n, adj, [(start, 0)])
-
 # Check if Tintin ever encounters mafia (must arrive strictly earlier than mafia everywhere)
 safe = True
 for i in range(n):
@@ -63,7 +60,7 @@ for i in range(n):
         break
 
 # Special check at destination vertex
-if tintin_dist[destination] >= mafia_final_dist[destination]:
+if tintin_dist[v] >= mafia_final_dist[v]:
     can_win = False
 else:
     can_win = True

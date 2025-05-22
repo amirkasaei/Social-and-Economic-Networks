@@ -4,6 +4,8 @@
 
 This course explores the structure and impact of social and economic networks. Students will learn key concepts such as network structure, information diffusion, strategic network formation, and economic effects. Using theoretical models, empirical analysis, and case studies, the course examines the role of networks in modern economies and societies
 
+[Website](https://sut-ce-courses.github.io/socialnetwork/)
+
 ## Syllabus Titles
 
 1. **Introduction to Networks (Complex, Brain, Social, …)**  

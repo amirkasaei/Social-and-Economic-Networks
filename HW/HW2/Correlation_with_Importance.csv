@@ -1,0 +1,21 @@
+Feature,Correlation with Importance
+importance,1
+tweets,0.879454459
+harmonicclosnesscentrality,0.870742598
+closnesscentrality,0.840777743
+Eccentricity,0.810847167
+replies,0.768525038
+impression,0.757776155
+betweenesscentrality,0.694701346
+Degree,0.67168707
+quotes,0.670259324
+outdegree,0.667992618
+retweets,0.587830898
+Hub,0.553124016
+indegree,0.152483265
+eigencentrality,0.118904888
+pageranks,0.087123058
+Authority,0.03584164
+Id,0.011815427
+followers,-0.003764198
+age,-0.007482951
